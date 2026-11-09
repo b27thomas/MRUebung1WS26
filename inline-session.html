@@ -216,16 +216,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           renderer = new Renderer(gl);
 
           scene.setRenderer(renderer);
-
-          // Neu TJ
-          if (session.isImmersive && arStartedNeu) {
+        }
+        
+        // Neu TJ
+        if (session.isImmersive && arStartedNeu) {
             // When in 'immersive-ar' mode don't draw an opaque background because
             // we want the real world to show through.
             skybox.visible = false;
           
-          }
         }
-        
+
         // WebGL layers for inline sessions won't allocate their own framebuffer,
         // which causes gl commands to naturally execute against the default
         // framebuffer while still using the canvas dimensions to compute
