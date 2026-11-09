@@ -237,9 +237,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           // which XRReferenceSpace is associated with which XRSession.
           if (session.isImmersive) {
             xrImmersiveRefSpace = refSpace;
-
-               if (arStartedNeu)
-              {
+   
                 // Neu TJ
                 xrImmersiveRefSpace.addEventListener('reset', (evt) => {
                 if (evt.transform) {
@@ -249,18 +247,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 }
                 });
 
-              }
 
           } else {
             xrInlineRefSpace = refSpace;
           }
           session.requestAnimationFrame(onXRFrame);
         });
-
-
-
-
-
 
       }
 
