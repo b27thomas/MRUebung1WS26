@@ -119,12 +119,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       let arStartedNeu;
 
       function initXR() {
-        xrButton = new WebXRButton({
-          onRequestSession: onRequestSession,
-          onEndSession: onEndSession
-        });
-        document.querySelector('header').appendChild(xrButton.domElement);
-
         // Neu TJ  
         xrButtonNeu = new WebXRButton({
               onRequestSession: onRequestSessionNeu,
@@ -136,6 +130,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
        document.querySelector('header').appendChild(xrButtonNeu.domElement);
 
+
+        xrButton = new WebXRButton({
+          onRequestSession: onRequestSession,
+          onEndSession: onEndSession
+        });
+        document.querySelector('header').appendChild(xrButton.domElement);
 
         if (navigator.xr) {
           navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
